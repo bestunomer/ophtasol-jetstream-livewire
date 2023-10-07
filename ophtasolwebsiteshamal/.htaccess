@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^ibinsina\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ibinsina\.org$
+RewriteRule ^/?$ "http\:\/\/www\.ibinsina\.org\/index\.php" [R=301,L]
+

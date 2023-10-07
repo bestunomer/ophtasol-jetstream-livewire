@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-mark class="block h-9 w-auto" />
+                        <x-application-mark />
                     </a>
                 </div>
 
@@ -43,14 +43,14 @@
                                     </div>
 
                                     <!-- Team Settings -->
-                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
+                                    <x-dropdown-item href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
                                         {{ __('Team Settings') }}
-                                    </x-dropdown-link>
+                                    </x-dropdown-item>
 
                                     @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                        <x-dropdown-link href="{{ route('teams.create') }}">
+                                        <x-dropdown-item href="{{ route('teams.create') }}">
                                             {{ __('Create New Team') }}
-                                        </x-dropdown-link>
+                                        </x-dropdown-item>
                                     @endcan
 
                                     <!-- Team Switcher -->
@@ -98,14 +98,14 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
+                            <x-dropdown-item href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
-                            </x-dropdown-link>
+                            </x-dropdown-item>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                <x-dropdown-link href="{{ route('api-tokens.index') }}">
+                                <x-dropdown-item href="{{ route('api-tokens.index') }}">
                                     {{ __('API Tokens') }}
-                                </x-dropdown-link>
+                                </x-dropdown-item>
                             @endif
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
@@ -114,10 +114,10 @@
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf
 
-                                <x-dropdown-link href="{{ route('logout') }}"
+                                <x-dropdown-item href="{{ route('logout') }}"
                                          @click.prevent="$root.submit();">
                                     {{ __('Log Out') }}
-                                </x-dropdown-link>
+                                </x-dropdown-item>
                             </form>
                         </x-slot>
                     </x-dropdown>
