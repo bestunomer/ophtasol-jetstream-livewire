@@ -30,16 +30,16 @@
                     </div>
 
                     <div class="hidden md:flex flex-1 grow inline-flex gap-4">
-                        <div class="hover:text-white">
+                         <a href="#" class="flex lg:inline-flex hover:text-white items-center">
                             Home
-                        </div>
+                         </a>
                         <div class="">
                             <x-dropdown width="96">
                                 <x-slot name="trigger">
-                                    <div class="flex lg:inline-flex hover:text-white items-center">
-                                        <span class="clear-left">Products</span>
-                                        <x-icon svgName="down-arrow" class="ml-1 stroke-slate-200" style="right: 12px;" width="22" height="22" />
-                                    </div>
+                                        <a href="#" class="group flex lg:inline-flex hover:text-white items-center">
+                                            <span class="clear-left">Products</span>
+                                            <x-icon svgName="down-arrow" class="ml-1 stroke-slate-200 group-hover:stroke-white group-hover:stroke-2" style="right: 12px;" width="22" height="22" />
+                                        </a>
                                 </x-slot>
                                 <x-slot name="content">
                                     <x-dropdown-item>Ophthalmic Lasers</x-dropdown-item>
@@ -48,7 +48,7 @@
                             </x-dropdown>
                         </div>
                         <div class="hover:text-white">
-                            <a href="#">
+                            <a href="#" class="">
                                 Contact Us
                             </a>
                         </div>
