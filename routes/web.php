@@ -15,7 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::get('/products', function () {
+    return view('products');
+})->name('products');
+
+Route::get('/aboutUs', function () {
+    return view('about-us');
+})->name('aboutUs');
+
+Route::get('/contactUs', function () {
+    return view('contact-us');
+})->name('contactUs');
 
 Route::middleware([
     'auth:sanctum',
